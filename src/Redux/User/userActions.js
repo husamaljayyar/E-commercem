@@ -12,7 +12,7 @@ import {
   USER_UPDATE_PROFILE_FAILED,
   USER_UPDATE_PROFILE_START,
   ADD_REVIEW_START,
-  ADD_REVIEW_SUCCESS,
+  ADD_REVIEW_SUCCESS, 
   ADD_REVIEW_FAILED,
   ADD_REVIEW_RESET,
   USER_UPDATE_PROFILE_SUCCESS,
@@ -32,12 +32,15 @@ export const loginAction = (values, history) => {
 
     try {
       const response = await axios.post(`${API_URL}/users/login`, values);
+      
       localStorage.setItem("user", JSON.stringify(response.data)); // data => from object send api used post reqoust
+
       dispatch({
         type: USER_LOGIN_SUCCESS,
         payload: response.data,
       });
       history.push("/");
+
     } catch (e) {
       dispatch({
         type: USER_LOGIN_FAILED,
@@ -126,7 +129,7 @@ export const updateProfileAction = (values, history) => {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-      }); 
+      });
       localStorage.setItem("user", JSON.stringify(response.data));
       dispatch({
         payload: response.data,

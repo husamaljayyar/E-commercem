@@ -10,7 +10,6 @@ import {
 export const Container = styled(FlexBox)`
   height: auto;
   padding: 60px;
-
   width: 100%;
   margin-bottom: 60px;
   justify-content: center;

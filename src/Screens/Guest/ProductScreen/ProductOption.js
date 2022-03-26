@@ -40,7 +40,7 @@ function ProductOption(props) {
   const [count, setCount] = useState(1);
   return (
     <>
-      <HeroSection>
+      <HeroSection >
         <ColumnContent Width={"30%"}>
           <Image
             src={"https://proshop-ms.herokuapp.com/" + product.product.image}
@@ -55,7 +55,7 @@ function ProductOption(props) {
                   {product.product.name}
                 </Typography>
                 <Typography fontSize={25} fontWeight={900}>
-                  ${product.product.price}
+                  ${product.product.price * count}
                 </Typography>
               </Row>
               <ContainerCount MarginTop style={{ marginBottom: "40px" }}>

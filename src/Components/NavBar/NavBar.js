@@ -125,7 +125,8 @@ export default function Navbar() {
               placeholder="Search"
               onChange={(e) => setValue(e.target.value)}
             />
-            <ButtonNav as={'button'}
+            <ButtonNav
+              as={"button"}
               style={{ position: "absolute", right: "0px", color: "#000" }}
               onClick={() => {
                 history.push(`/search${value ? `?keyword=${value}` : ""}`);
@@ -165,7 +166,8 @@ export default function Navbar() {
               </Typography>
             </Icon>
             {state.userDetails.user._id && (
-              <Icon as={'button'}
+              <Icon
+                as={"button"}
                 onClick={() => {
                   dispatch(logoutAction());
                   localStorage.removeItem("user");

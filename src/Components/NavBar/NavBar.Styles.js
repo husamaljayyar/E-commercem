@@ -24,7 +24,7 @@ export const NavBox = styled(FlexRow)`
 `;
 
 export const StyledBox = styled(NavBox)`
-   @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1100px) {
     display: none;
   }
 `;
@@ -79,10 +79,10 @@ export const ButtonNav = styled("button")`
   height: 40px;
   font-size: 18px;
   font-weight: 500;
-  background: #fcac5e;
   opacity: 1;
   cursor: pointer;
   border: none;
+  background: #fcac5e;
 `;
 
 export const Icon = styled(Link)`
@@ -94,6 +94,9 @@ export const Icon = styled(Link)`
   height: 40px;
   width: auto;
   margin: auto 0 auto 32px;
+  background: none;
+  outline: none;
+  border: none;
   span {
     color: #000;
     background: #fcac5e;

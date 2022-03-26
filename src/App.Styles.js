@@ -18,7 +18,8 @@ export const Typography = styled("p")((props) => ({
   fontSize: `${props.fontSize}px`,
   color: props.color,
   fontWeight: props.fontWeight,
-  padding:  props.Padding ? '30px 0' : '0'
+  padding:  props.Padding ? '30px 0' : '0',
+
 }));
 
 export const FlexBox = styled("div")`
@@ -81,11 +82,11 @@ export const ContainerCount = styled(FlexRow)`
 `;
 
 export const RIcon = styled("span")`
-  width: 48px;
-  height: 40px;
+  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+
 `;
 
 export const TypographyCount = styled(Typography)`

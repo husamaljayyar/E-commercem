@@ -27,6 +27,7 @@ function Login() {
   const isLoading = state.userDetails.isLoading;
 
   const handleSaveChanges = async (values) => {
+    //     dispatch(loginAction(values, history));
     dispatch(loginAction(values, history));
   };
 
@@ -79,6 +80,7 @@ function Login() {
                   height={"40px"}
                   radius={"50px"}
                   text={"Login"}
+                  onSubmit={handleSaveChanges}
                 />
               </Forms>
             );
